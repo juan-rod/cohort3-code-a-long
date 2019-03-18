@@ -1,0 +1,50 @@
+
+    
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #212224;
+}
+/* .border1 {
+  border: 3px solid red;
+}
+.border2 {
+  border: 3px solid blue;
+} */
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.image-grid-container {
+  /**** replace me with code ****/
+
+  /* With the auto-fill keyword we can dictate how wide our 
+  tracks are and let Grid figure out how many will fit in 
+  the available space. */
+  
+  /**** replace me with code ****/
+}
+.image-box {
+  position: relative;
+  box-shadow: 1px 1px 16px 0px rgba(134, 134, 134, 0.1);
+}
+.image-box  h1 {
+  position: absolute;
+  bottom: 0;
+  right:20;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(60, 62, 61, 0.61)
+}
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
