@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+.border1 {
+  border: 1px solid red;
+}
+.border2 {
+  border: 1px solid yellow;
+}
+.border3 {
+  border: 1px solid blue;
+}
+.border4 {
+  border: 1px solid black;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+.main-container {
+  height: 100%;
+}
+.cards {
+}
+.cards__item {
+  padding: 16px;
+  max-width: 375px;
+}
+.card {
+  background-color: white;
+  height: 500px;
+}
+
+.card__content {
+  padding: 1rem;
+}
+.card__image {
+  height: 50%;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+}
+.card__image--fence {
+  background-image: url(https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80);
+}
+.card__title {
+  color: #4d4e4f;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.card__text {
+  font-size: 0.875rem;
+}
+
+@media(min-width: 640px) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media(min-width: 896px) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
