@@ -17,5 +17,22 @@ body {
 }
 
 .main-container {
-
+  height: 100%;
+  background: linear-gradient(160deg,#ffeb00,#ffb820,#ff8748,#ff5e69,#dd4582,#a43f8e,#623e8a,#0c3776);
+}
+nav {
+  height: 80px;
+  padding: 0px 15px;
+  background-color: rgba(238, 238, 238, 0.5);
+  transition: background-color 0.3s ease;
+}
+nav:hover {
+  background-color: rgba(238, 238, 238, 0.8);
+}
+nav .logo{
+  height: 70px;
+  width: auto;
+}
+nav ul{
+  height:100%;
 }
