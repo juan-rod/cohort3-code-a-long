@@ -25,13 +25,14 @@ body {
   padding: 20px;
 }
 .image-grid-container {
-  /**** replace me with code ****/
+  display: grid;
 
   /* With the auto-fill keyword we can dictate how wide our 
   tracks are and let Grid figure out how many will fit in 
   the available space. */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
   
-  /**** replace me with code ****/
 }
 .image-box {
   position: relative;

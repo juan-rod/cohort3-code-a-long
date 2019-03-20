@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 *{
   box-sizing: border-box;
 }
@@ -9,48 +9,39 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
-/* teach first, remove -1 */
+/* remove -1 from this class name to see below in action. 
+only use one grid-template-rows and one grid-template-columns.
+There are multiple here only to show the various ways to size your columns and rows.*/
 .grid-container-1 {
   border: 3px solid black;
   height: 100%;
   /* Grid items are placed in rows by default and
   span the full width of the grid container. */
-  
-  /**** replace me with code ****/
-
+  display: grid;
    /* Explicit Grid */
    /* Explicitly set a grid by creating columns and rows with 
    the grid-template-columns and grid-template-rows properties. */
-
-  /**** replace me with code ****/
-
+  grid-template-rows: 50px 100px;
   /* A row track is created for each value specified for grid-template-rows. 
   Track size values can be any non-negative, length value (px, %, em, etc.)
   Items 1 and 2 have fixed heights of 50px and 100px.
   Because only 2 row tracks were defined, heights of items 3 and 4 are defined by the contents of each. */
-
-  /**** replace me with code ****/
-
+  grid-template-columns: 90px 50px 120px;
   /* Items 4, 5 and 6 were placed on a new row track because only 
   3 column track sizes were defined; and because they were placed in column 
   tracks 1, 2 and 3, their column sizes are equal to items 1, 2 and 3. */
-
-  /**** replace me with code ****/
-
+  grid-template-columns: 1fr 1fr 2fr;
   /* The fr unit helps create flexible grid tracks. It represents a fraction of the available 
   space in the grid container (works like Flexbox’s unitless values).
   In this example, items 1 and 2 take up the first two (of four) 
   sections while item 3 takes up the last two. */
-
-  /**** replace me with code ****/
-
+  grid-template-columns: 3rem 25% 1fr 2fr;
   /* fr is calculated based on the remaining space when combined with other length values. */
   /* In this example, 3rem and 25% would be subtracted from the 
   available space before the size of fr is calculated: */
 
-  /**** replace me with code ****/
-  /**** replace me with code ****/
-
+  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: minmax(auto, 50%) 1fr 3em;
   /* The minmax() function accepts 2 arguments: the first is the minimum size of the track 
   and the second the maximum size. Alongside length values, the values can also be auto, 
   which allows the track to grow/stretch based on the size of the content.
@@ -58,27 +49,19 @@ body {
   but its maximum size of auto will allow the row track to grow it the content is taller than 100px.
   The first column track has a minimum size of auto, but its maximum size of 50% will prevent 
   it from getting no wider than 50% of the grid container width. */
-
- /**** replace me with code ****/
-  /**** replace me with code ****/
-
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(3, 1fr);
   /* The repeat() notation accepts 2 arguments: 
   the first represents the number of times the defined tracks should repeat, 
   and the second is the track definition. */
-
-  /**** replace me with code ****/
-
+  grid-template-columns: 30px repeat(3, 1fr) 30px;
   /* repeat() can also be used within track listings.
   In this example, the first and last column tracks have widths of 30px, 
   and the 3 column tracks in between, created by repeat(), have widths of 1fr each. */
-
-  /**** replace me with code ****/
-  /**** replace me with code ****/
-
+  grid-row-gap: 20px;
+  grid-column-gap: 5rem;
   /* Gap size values can be any non-negative, length value (px, %, em, etc.) */
-
-  /**** replace me with code ****/
-
+  grid-gap: 100px 1em;
   /* grid-gap is shorthand for grid-row-gap and grid-column-gap.
   If two values are specified, the first represents grid-row-gap and the second grid-column-gap. */
 }
@@ -92,50 +75,56 @@ body {
   justify-content: center;
   align-items: center;  
 }
-/* teach first, change -10 to 1 */
-.grid-item-1 {
-  /**** replace me with code ****/
-
+/* to see this in action, change -10 to -1.
+ below show various ways to write grid-row and grid-column */
+.grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end:   4;
   /* Set a grid item to span more than one column 
   track by setting grid-column-end to a column line number that is 
   more than one column away from grid-column-start. */
-
-  /**** replace me with code ****/
-
+  grid-row-start: 1;
+  grid-row-end:   4;
   /* Grid items can also span across multiple row tracks 
   by setting grid-row-end to more than one row track away. */
-
-  /**** replace me with code ****/
-
+  grid-row:    2 / 5;
+  grid-column: 2 / 4;
   /* Shorthand properties grid-row and grid-column can also be 
   used to position and span grid items more than one row or column. */
-
-  /**** replace me with code ****/
-
+  grid-row:    2 / span 3;
+  grid-column: span 2;
   /* The keyword span, followed by the # of columns or rows 
   to span, can also be used. */
 }
 
-/* teach when you get to grid areas */
-.grid-container {
+/* remove -1 from class name to see this in action.*/
+.grid-container-1 {
   border: 3px solid black;
   height: 100%;
   display: grid;
- /**** replace me with code ****/
-
-
+  grid-template-rows:    150px 1fr 100px;
+  grid-template-columns: 1fr 200px;
+  grid-template-areas:  "header header"
+                        "content sidebar"
+                        "footer footer";
 /* Sets of names should be surrounded in 
 single or double quotes, and each name separated by a whitespace.
 Each set of names defines a row, and each name defines a column. */
 }
-
-.grid-item-1 {
-  
- /**** replace me with code ****/
+/* change -11 to -1 from class name to see this in action.*/
+.grid-item-11 {
+  /* grid-area: header; */
+  grid-row-start:    header;
+  grid-row-end:      header;
+  grid-column-start: header;
+  grid-column-end:   header;
 }
-.grid-item-3 {
-  /**** replace me with code ****/
+/* change -31 to -3 from class name to see this in action.*/
+.grid-item-31 {
+  grid-area: sidebar;
 }
-.grid-item-4 {
-  /**** replace me with code ****/
+/* change -41 to -4 from class name to see this in action.*/
+.grid-item-41 {
+  grid-row: footer;
+  grid-column: footer;
 }

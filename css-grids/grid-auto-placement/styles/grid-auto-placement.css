@@ -14,18 +14,21 @@ body {
 
 .grid-container {
   /* padding-top: 40px; */
+  display: grid;
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  
- /**** replace me with code ****/
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 2px;
 
   /* see how numbers are going left to right.
   i'm using grid-auto-flow: row to do that.
   if i wanted the numbers to go up and down along the column,
   grid-auto-flow: column */
   grid-auto-flow: row dense;
+  /* grid-auto-rows: 500px;
+  grid-auto-columns: 500px; */
 }
 
 /* items */
@@ -40,11 +43,17 @@ body {
 
 .item-1 {
   background: #b03532;
-  /**** replace me with code ****/
+  grid-row-start : 1; 
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  z-index: 1;
 }
 .item-2 {
   background: #33a8a5;
-  /**** replace me with code ****/
+  grid-row-start : 1; 
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  
 }
 .item-3 {
   background: #ff9069;
@@ -60,14 +69,16 @@ body {
 }
 .item-7 {
   background: #e03f3f;
-  /**** replace me with code ****/
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .item-8 {
   background: #59a627;
 }
 .item-9 {
   background: #b03532;
-  /**** replace me with code ****/
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .item-10 {
   background: #4464a1;
