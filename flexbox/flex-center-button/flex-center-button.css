@@ -5,13 +5,22 @@ body {
 }
 
 .container {
-
+  height: 100%;
   background: url('https://images.unsplash.com/photo-1535478372499-9d1e5130bd92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80') center;
+  background-size: cover;
 }
 .container--inner {
-
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(77, 78, 79, 0.21);
 }
 .button__wrapper {
+  padding: 20px 50px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 13px 0px rgba(0,0,0, .15);
+  background-color: rgba(238, 238, 238, 0.75);
   transform: scale(1);
   transition: transform 300ms ease;
 }
