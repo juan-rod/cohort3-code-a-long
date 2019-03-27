@@ -1,26 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,600,600i,700,700i,800,800i');
 
-.border1 {
-  border: 1px solid red;
-}
-.border2 {
-  border: 1px solid yellow;
-}
-.border3 {
-  border: 1px solid blue;
-}
-.border4 {
-  border: 1px solid black;
-}
 body {
   font-family: 'Roboto', sans-serif;
 }
 
 .main-container {
   color: #212224;
-  height: 100%;
+  height: auto;
   width: 100%;
   padding: 20px;
+  background: #eee;
 }
 .main-container--header {
   height: 80px;
@@ -29,13 +18,17 @@ body {
   margin: 0 0 .5em 0;
 }
 .main-container--body {
-  height: 100%;
+  height: auto;
+  padding: 20px;
+  /* box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.161); */
 }
 .code-link-container {
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+  padding: 1em;
+  border: 5px solid #224889;
 }
 .code-link-container h3 {
   margin-bottom: .5em;
@@ -52,6 +45,23 @@ body {
 }
 .code-nav a {
   margin-right: 1em;
+  /* background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%); */
+  background: rgb(56,79,175);
+  background: linear-gradient(351deg, rgba(56,79,175,1) 0%, rgba(148,187,233,1) 71%);
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  transform: scale(1);
+  position: relative;
+  bottom: 0;
+  transition: all 200ms ease-in;
+}
+a:hover {
+  font-weight: bolder;
+  transform: scale(1.01);
+  bottom: 5px;
+  background: linear-gradient(9deg, rgba(56,79,175,1) 0%, rgba(148,187,233,1) 71%);
+  box-shadow: 4px 3px 9px 0px rgba(148, 187, 233, 0.36);
 }
 .code-nav-link {
   height: 100%;
