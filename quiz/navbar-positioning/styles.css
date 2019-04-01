@@ -7,10 +7,34 @@ body {
 }
 
 nav {
-  margin: 1em 0;
+  margin: 1em 0 8em;
+  height: 150px;
 }
-nav .logo {
-  /* width: 200px;
-  height: 100px;
-  background: red; */
+
+/* flexbox navigation */
+.flexbox-nav {
+
+}
+.flexbox-nav .logo {
+
+}
+.flexbox-nav .navigation{
+
+}
+.flexbox-nav ul li {
+
+}
+
+/* relative-absolute navigation */
+.relative-absolute-nav {
+
+}
+.relative-absolute-nav .logo{
+
+}
+.relative-absolute-nav .navigation{
+
+}
+.relative-absolute-nav ul li {
+
 }
