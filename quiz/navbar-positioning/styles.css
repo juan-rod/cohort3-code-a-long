@@ -2,6 +2,9 @@
 .border1 {
   border: 1px solid red;
 }
+/* .border1 {
+  border: 1px solid red;
+}
 .border2 {
   border: 1px solid yellow;
 }
@@ -10,7 +13,7 @@
 }
 .border4 {
   border: 1px solid black;
-}
+} */
 body {
   padding: 0;
   margin: 0;
@@ -24,28 +27,40 @@ nav {
 
 /* flexbox navigation */
 .flexbox-nav {
-
+  display: flex;
+  justify-content: space-between;
 }
 .flexbox-nav .logo {
-
+  display: flex;
+  align-items: center;
 }
 .flexbox-nav .navigation{
-
+  display: flex;
+  align-items: center;
+}
+.flexbox-nav ul {
 }
 .flexbox-nav ul li {
-
+  display: inline;
 }
 
 /* relative-absolute navigation */
 .relative-absolute-nav {
-
+  position: relative;
 }
 .relative-absolute-nav .logo{
-
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
+.relative-absolute-nav .logo h1 {
+  display: inline;
 }
 .relative-absolute-nav .navigation{
-
+  position: absolute;
+  right: 0;
+  top: 25%;
 }
 .relative-absolute-nav ul li {
-
+  display: inline;
 }
