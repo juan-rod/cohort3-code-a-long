@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./transitions.css">
+  <title>Transition</title>
+</head>
+<body>
+  <div class="component-container">
+    <h2>transition</h2>
+    <div class="component box box-1">Hover Transition</div>
+  </div>
+  <div class="component-container">
+    <h2>transition-duration</h2>
+    <div class="component-wrapper">
+      <div class="component circle circle-1"> 300ms</div>
+      <div class="component circle circle-2">1s</div>
+      <div class="component circle circle-3">3s</div>
+    </div>
+  </div>
+  
+  <div class="component-container">	
+    <h2>transition-timing-function</h2>
+    <div class="component-wrapper component-wrapper-timing">
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-1 ">
+          <h4>linear</h4>
+        </div>
+      </div>
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-2 ">
+          <h4>ease-in</h4>
+        </div>
+      </div>
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-3 ">
+          <h4>ease</h4>
+        </div>
+      </div>
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-4 ">
+          <h4>ease-in-out</h4>
+        </div>
+      </div>
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-5 ">
+          <h4>ease-out</h4>
+        </div>
+      </div>
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-6 ">
+          <h4>cubic-bezier</h4>
+        </div>
+      </div>
+      <div class="timing-component-track">
+        <div onclick="initCubicBezier(this)" class="component timing-component timing-component-7 ">
+          <h4>custom cubic-bezier</h4>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="./transitions.js"></script>
+</body>
+</html>

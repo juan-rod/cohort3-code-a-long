@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+*{
+  box-sizing: border-box;
+}
+body {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+.component {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #525252;
+  box-shadow: 2px 2px 7px 0px rgba(134, 134, 134, 0.63);
+  border-radius: 6px;
+  padding: 1em;
+}
+.component-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+/* /// Transitions ///*/
+/* transition: property | duration | timing-function | delay; */
+/* There are four transition-related sub-properties: 
+    1. transition-property, 
+    2. transition-duration, 
+    3. transition-timing-function,
+    4. transition-delay. 
+Not all of these are required to build a transition, and can be put togetherlike this */
+.box-1 {
+  background-color: crimson;
+  transition: all 300ms ease-in-out;
+  /* transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+.box-1:hover {
+  color: #eee;
+  background-color: #e28395;
+}
+
+/* transition duration */
+/* The transition-duration value sets how long the transition lasts 
+and can be written using general timing values, including seconds s and milliseconds ms. 
+The lower the timing value, the faster the duration */
+.component-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em 0;
+}
+.component-wrapper:hover .circle {
+  transform: scale(1.5);
+}
+.circle {
+  background-color: pink;
+  border-radius: 50%;
+}
+.circle-1 {
+  transition: all 300ms;
+}
+
+.circle-2 {
+  transition: all 1s;
+}
+
+.circle-3 {
+  transition: all 3s;
+}
+
+/* transition-timing-function */
+.component-wrapper-timing {
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.timing-component-track {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: rgba(238, 238, 238, 0.397);
+}
+.timing-component {
+  border-radius: 50%;
+  /* position: absolute;
+  margin: auto 0; */
+}
+.active {
+  /* right: 0; */
+  transform: rotate(720deg);
+}
+/* Transitions */
+
+.timing-component-1 {	
+  transition: all 1.4s linear;
+}
+
+.timing-component-2 {	
+  transition: all 1.4s ease-in;
+}
+
+.timing-component-3 {	
+  transition: all 1.4s ease;
+}
+
+.timing-component-4 {	
+  transition: all 1.4s ease-in-out;
+}
+
+.timing-component-5 {	
+  transition: all 1.4s ease-out;
+}
+
+.timing-component-6 {	
+  transition: all 1.4s cubic-bezier(.2,.8,.8,.2);
+}
+.timing-component-7 {
+  transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+}

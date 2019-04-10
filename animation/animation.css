@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   padding: 20px;
-  /* animation: change-background 4s ease infinite; */
+  animation: change-background 1s ease infinite;
 }
 h1 {
   /* animation: change-text 4s ease infinite; */
