@@ -12,8 +12,15 @@ console.log('nameDiv', nameDiv)
 nameDiv.innerText = myName
 // create a variable that gives you access to the div with the class that equals 'link-list'
 var linkList = document.querySelector('.link-list')
+// create a ul element
 var ul = document.createElement('ul')
-var li = document.createElement('li')
+// append it to the link-list element
 linkList.append(ul)
-ul.append(li)
-
+// create an array
+var navList = ['Home', 'About', 'Projects', 'Contact']
+// loop through array and append each to an li in the ul
+navList.forEach(item => {
+  var listItem = document.createElement("li")
+  listItem.innerText = item
+  ul.appendChild(listItem)
+})

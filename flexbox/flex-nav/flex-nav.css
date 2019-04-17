@@ -34,7 +34,7 @@ nav:hover {
   background-color: rgba(238, 238, 238, 0.8);
 }
 nav .logo{
-  flex: 2;
+  flex: 1;
   height: 70px;
   width: auto;
   display: flex;
@@ -49,11 +49,70 @@ nav .logo{
 nav ul{
   height:100%;
   flex: 1;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 ul li {
   /* width: 100px; */
+}
+.hamburger {
+  display: block;
+  transition: opacity 500ms ease;
+  z-index: 1;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 50px;
+  background: black;
+  margin: 8px 0;
+}
+.mobile-nav ul {
+  display: none;
+}
+.open-nav{
+  position: absolute;
+  top: 0;
+  height: 500px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.205);
+}
+.open-nav ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  width: 100%;
+
+}
+
+@media(min-width: 640px) {
+  nav {
+    align-items: flex-start;
+  }
+  nav ul {
+    display: flex;
+  }
+  .mobile-nav ul {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  main {
+    flex-direction: row;
+  }
+  nav ul {
+    /* border: 5px solid red; */
+    opacity: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav ul li {
+    margin: 0 20px;
+  }
 }
