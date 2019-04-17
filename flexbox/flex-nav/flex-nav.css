@@ -72,33 +72,11 @@ ul li {
 .mobile-nav ul {
   display: none;
 }
-.open-nav{
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(232, 22, 67, 0.85);
-}
-.open-nav ul {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  width: 100%;
-
-}
 
 @media(min-width: 640px) {
-  nav {
-    align-items: flex-start;
-  }
+
   nav ul {
     display: flex;
-  }
-  .mobile-nav ul {
-    display: none;
   }
   .hamburger {
     display: none;
@@ -107,7 +85,6 @@ ul li {
     flex-direction: row;
   }
   nav ul {
-    /* border: 5px solid red; */
     opacity: 1;
     display: flex;
     justify-content: flex-end;
