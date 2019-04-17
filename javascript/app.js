@@ -24,3 +24,5 @@ navList.forEach(item => {
   listItem.innerText = item
   ul.appendChild(listItem)
 })
+
+// add class to navigation
