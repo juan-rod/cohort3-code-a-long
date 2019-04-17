@@ -39,11 +39,14 @@ body {
   margin: 0;
 }
 /* 🎉 2018 pantone color of the year 🎉 */
-.ultra-violet{
+/* .ultra-violet{
   height: 100%;
   background-color: rgba(95, 75, 139, .8);
+} */
+.living-coral {
+  height: 100%;
+  background-color: rgba(250, 114, 104, 0.8);
 }
-
 /* ////////////////////////////////////// */
 /* SCALE */
 
@@ -78,7 +81,8 @@ For example, transform: scale(1, 1); */
 
 
 .box:hover .scale{
-  transform: scale(1.5, 1.5);
+  transform: scale(1.05);
+  /* transform: scale(1.5); */
 }
 
 /* ////////////////////////////////////// */
@@ -114,7 +118,7 @@ The values themselves can be any length unit in CSS such as pixels, precentages 
 
 
 .box:hover .translate{
-  transform: translate(2em, 2em);
+  transform: translate(-2em, -2em);
 }
 
 /* translate along the x, y, and z axis */
@@ -170,7 +174,7 @@ such as 90deg, or rotates the element counter-clockwise with
  /* You can spin an element beyond one rotation by using a value over 360. */
 .rotate{
   transform: rotate(0);
-  transition: transform 0.5s ease;  
+  transition: transform 3s ease;  
 }
 
 .box:hover .rotate{
@@ -237,12 +241,12 @@ The transform-origin property allows us to change that. */
 .origin{
   transform-origin: left top;
   /* below is the same as the top */
-  /* transform-origin: 0% 0%; */
+  /* transform-origin: 10% 0%; */
   transition: transform 3s ease;  
 }
 
 .box:hover .origin{
-  transform: rotate(500deg);
+  transform: rotate(720deg);
 }
 
 /* ////////////////////////////////////// */
@@ -250,10 +254,11 @@ The transform-origin property allows us to change that. */
 /* Multiple transforms can be set in one declaration – simply divide each with a space. */
 .multiple{
   transform: rotate(0deg) scale(1) translateY(0) translateX(0);
-  transition: transform 3s ease;  
+  transition: all 3s ease;  
 }
 
 .box:hover .multiple{
+  background-color: green;
   transform: rotate(90deg) scale(2) translateY(-50%) translateX(50%);
 }
 
