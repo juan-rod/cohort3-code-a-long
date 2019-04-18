@@ -72,9 +72,28 @@ ul li {
 .mobile-nav ul {
   display: none;
 }
+.mobile-nav {
+  transition: all 500ms ease;
+}
+.open-nav {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: red;
+  position: absolute;
+  top: 0;
+  transition: all 500ms ease;
+}
+.open-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
 
 @media(min-width: 640px) {
-
+  .open-nav {
+    display: none;
+  }
   nav ul {
     display: flex;
   }
